@@ -1,0 +1,67 @@
+ .controls {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  left: calc(var(--width-slide) - var(--padding));
+  transform: translateX(-100%);
+  bottom: var(--padding);
+  z-index: 5;
+}
+
+.btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: var(--accent-color) url('../../assets/img/arrow.svg') no-repeat center/12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #FFD952;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #9E7B00;
+}
+
+.btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+}
+
+.btn:disabled {
+  background: #E0E0E0;
+  border-color: #E0E0E0;
+  color: #898989;
+  cursor: default;
+}
+
+.btn_next {
+  rotate: 180deg;
+}
+
+.btn_next:active:not(:disabled) {
+  transform: translate(-2px, -2px);
+}
+
+@media (max-width: 1240px) {
+  .controls {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 920px) {
+  .controls {
+    left: auto;
+    right: var(--padding);
+    transform: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .controls {
+    left: auto;
+    right: var(--padding);
+  }
+}

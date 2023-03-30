@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 50px;
+}
+
+.title {
+  flex-basis: 50%;
+  max-width: 480px;
+}
+
+.list {
+  flex-basis: 50%;
+}
+
+.item {
+  margin-top: 32px;
+  padding-left: 32px;
+  font-size: 24px;
+  line-height: 130%;
+  text-transform: uppercase;
+  background-image: url('../../assets/img/star.svg');
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: left center;
+}
+
+.item:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .title {
+    max-width: 330px;
+  }
+
+  .item {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 920px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 30px;
+  }
+
+  .title {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .list {
+    flex-basis: 100%;
+  }
+
+  .item {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .title {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .list {
+    flex-basis: 100%;
+  }
+
+  .item {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+}

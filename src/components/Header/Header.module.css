@@ -1,0 +1,33 @@
+.header {
+  margin: 18px 0 18px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid #232020;
+}
+
+.btn:hover {
+  border-color: #FFD952;
+}
+
+.btn:focus-visible {
+  border-color: var(--accent-color);
+}
+
+.btn:disabled {
+  color: #E0E0E0;
+  border-color: #E4E4E4;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 560px) {
+  .header {
+    margin: 16px 0;
+  }
+}

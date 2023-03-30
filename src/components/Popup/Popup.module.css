@@ -1,0 +1,140 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: auto;
+  transition: opacity 400ms ease 0ms;
+}
+
+.popup {
+  position: relative;
+  display: flex;
+  width: 790px;
+  min-height: 412px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.popup::after {
+  content: '';
+  flex: 0 0 350px;
+  background-color: #E4E4E4;
+  background-image: url('../../assets/img/popup-img_desc.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.content__block {
+  width: 440px;
+  padding: 30px;
+}
+
+.title {
+  max-width: 380px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #232020;
+}
+
+.description {
+  max-width: 380px;
+  margin-top: 24px;
+  text-transform: uppercase;
+  color: #232020;
+}
+
+.btn_close {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  width: 13px;
+  height: 13px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn_close::before,
+.btn_close::after {
+  content: '';
+  top: 0;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #232020;
+}
+
+.btn_close::before {
+  transform: rotate(45deg);
+}
+
+.btn_close::after {
+  transform: rotate(-45deg);
+}
+
+.btn_close:hover::before,
+.btn_close:hover::after {
+  background-color: var(--accent-color);
+}
+
+@media (max-width: 920px) {
+  .popup {
+    width: 632px;
+    height: 308px;
+  }
+
+  .content__block {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    margin-top: 16px;
+  }
+
+  .block__image {
+    flex: 0 0 192px;
+    background-image: url('../../assets/img/popup-img_tablet.jpg');
+  }
+}
+
+@media (max-width: 560px) {
+  .popup {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+  }
+
+  .content__block {
+    width: 100%;
+    padding: 40px 20px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    margin-top: 16px;
+  }
+
+  .block__image {
+    flex-basis: 100%;
+    background-image: url('../../assets/img/popup-img_mobile.jpg');
+  }
+}

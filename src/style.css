@@ -1,0 +1,147 @@
+:root {
+  --width-slide: 590px;
+  --height-slide: 530px;
+  --width-block: calc(50% - 10px);
+  --gap: 10px;
+  --padding: 50px;
+  --accent-color: #FFC700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #232020;
+  background-color: #FFFFFF;
+}
+
+.btn {
+  padding: 18px 40px;
+  text-transform: uppercase;
+  color: #232020;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  border-radius: 24px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #FFD952;
+  border-color: #FFD952;
+}
+
+.btn:focus-visible {
+  border-color: #9E7B00;
+}
+
+.btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+}
+
+.btn:disabled {
+  background: #E0E0E0;
+  border-color: #E0E0E0;
+  color: #898989;
+  cursor: default;
+}
+
+.input {
+  padding: 15px 25px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #232020;
+  background-color: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 12px;
+  outline: none;
+}
+
+.input:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.link {
+  text-decoration: none;
+  white-space: nowrap;
+  color: inherit;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: var(--accent-color);
+}
+
+.link:focus {
+  outline-color: var(--accent-color);
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.gray-block {
+  padding: var(--padding);
+  background-color: #F8F8F8;
+  border-radius: 12px;
+}
+
+@media (max-width: 1240px) {
+  :root {
+    --width-slide: 440px;
+    --height-slide: 396px;
+    --padding: 30px;
+  }
+}
+
+@media (max-width: 920px) {
+  :root {
+    --width-slide: 311px;
+    --height-slide: 280px;
+    --width-block: 100%;
+    --gap: 8px;
+    --padding: 24px;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 1.215;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --width-slide: 308px;
+    --height-slide: 276px;
+    --gap: 4px;
+    --padding: 20px;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .gray-block {
+    min-height: 232px;
+  }
+}
