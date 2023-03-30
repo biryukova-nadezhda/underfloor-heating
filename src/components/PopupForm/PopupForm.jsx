@@ -31,6 +31,9 @@ export const PopupForm = ({ closeFunc }) => {
       case 'phone':
         setPhoneTouch(true);
         break;
+      default:
+        setNameTouch(false);
+        setPhoneTouch(false);
     };
   }
 
@@ -76,7 +79,7 @@ export const PopupForm = ({ closeFunc }) => {
               onBlur={ (e) => blurHandler(e) }
               onChange={ (e) => nameChangeHandler(e) }
               className={ classNames('input', style.input) } />
-            { (nameTouch && nameError) && <div className={ style.error }><span >{ nameError }</span></div>}
+            { (nameTouch && nameError) && <div className={ style.error }><span >{ nameError }</span></div> }
           </label>
 
           <label className={ style.label }>

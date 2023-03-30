@@ -91,7 +91,7 @@
 @media (max-width: 920px) {
   .popup {
     width: 632px;
-    height: 308px;
+    min-height: 308px;
   }
 
   .content__block {

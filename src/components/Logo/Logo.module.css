@@ -1,13 +1,11 @@
 @media (max-width: 920px) {
   .logo {
     max-width: 124px;
-    height: calc((124px * 45px) / 162px);
   }
 }
 
 @media (max-width: 560px) {
   .logo {
     max-width: 124px;
-    height: calc((124px * 45px) / 162px);
   }
 }

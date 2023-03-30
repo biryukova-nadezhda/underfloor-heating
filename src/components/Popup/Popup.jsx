@@ -31,7 +31,7 @@ export const Popup = ({ openPopup }) => {
         }
       });
     }
-  }, []);
+  }, [close, openPopup]);
 
   return (
     <>
